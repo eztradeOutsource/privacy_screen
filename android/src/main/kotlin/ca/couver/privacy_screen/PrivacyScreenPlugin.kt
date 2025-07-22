@@ -34,9 +34,9 @@ class PrivacyScreenPlugin : FlutterPlugin, MethodCallHandler, ActivityAware, Def
             "updateConfig" -> {
                 activity?.window?.let { window ->
                     if (call.argument<Boolean>("enableSecureAndroid") == true) {
-                        window.addFlags(LayoutParams.FLAG_SECURE)
+                        //window.addFlags(LayoutParams.FLAG_SECURE)
                     } else {
-                        window.clearFlags(LayoutParams.FLAG_SECURE)
+                        //window.clearFlags(LayoutParams.FLAG_SECURE)
                     }
                 }
                 autoLockAfterSeconds = call.argument<Number>("autoLockAfterSecondsAndroid") ?: -1
